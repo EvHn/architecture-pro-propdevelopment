@@ -1,0 +1,413 @@
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "RequestResponse",
+  "auditID": "669348f3-0bd2-40df-bb4f-4fdef41c0716",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/kube-system/secrets?limit=500",
+  "verb": "list",
+  "user": {
+    "username": "minikube-user",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "192.168.49.1"
+  ],
+  "userAgent": "kubectl.exe/v1.34.1 (windows/amd64) kubernetes/93248f9",
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "kube-system",
+    "apiVersion": "v1"
+  },
+  "requestReceivedTimestamp": "2025-12-10T21:51:39.952741Z",
+  "stageTimestamp": "2025-12-10T21:51:39.952741Z"
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "RequestResponse",
+  "auditID": "669348f3-0bd2-40df-bb4f-4fdef41c0716",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/kube-system/secrets?limit=500",
+  "verb": "list",
+  "user": {
+    "username": "minikube-user",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "192.168.49.1"
+  ],
+  "userAgent": "kubectl.exe/v1.34.1 (windows/amd64) kubernetes/93248f9",
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "kube-system",
+    "apiVersion": "v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "responseObject": {
+    "kind": "Table",
+    "apiVersion": "meta.k8s.io/v1",
+    "metadata": {
+      "resourceVersion": "611"
+    },
+    "columnDefinitions": [
+      {
+        "name": "Name",
+        "type": "string",
+        "format": "name",
+        "description": "Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names",
+        "priority": 0
+      },
+      {
+        "name": "Type",
+        "type": "string",
+        "format": "",
+        "description": "Used to facilitate programmatic handling of secret data. More info: https://kubernetes.io/docs/concepts/configuration/secret/#secret-types",
+        "priority": 0
+      },
+      {
+        "name": "Data",
+        "type": "string",
+        "format": "",
+        "description": "Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_' or '.'. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4",
+        "priority": 0
+      },
+      {
+        "name": "Age",
+        "type": "string",
+        "format": "",
+        "description": "CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.\n\nPopulated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata",
+        "priority": 0
+      }
+    ],
+    "rows": []
+  },
+  "requestReceivedTimestamp": "2025-12-10T21:51:39.952741Z",
+  "stageTimestamp": "2025-12-10T21:51:39.958110Z",
+  "annotations": {
+    "authorization.k8s.io/decision": "allow",
+    "authorization.k8s.io/reason": ""
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "RequestResponse",
+  "auditID": "cddf0191-2ea3-4aae-882c-91673aefc667",
+  "stage": "RequestReceived",
+  "requestURI": "/api/v1/namespaces/kube-system/secrets?limit=500",
+  "verb": "list",
+  "user": {
+    "username": "minikube-user",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "192.168.49.1"
+  ],
+  "userAgent": "kubectl.exe/v1.34.1 (windows/amd64) kubernetes/93248f9",
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "kube-system",
+    "apiVersion": "v1"
+  },
+  "requestReceivedTimestamp": "2025-12-10T21:51:40.447553Z",
+  "stageTimestamp": "2025-12-10T21:51:40.447553Z"
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "RequestResponse",
+  "auditID": "cddf0191-2ea3-4aae-882c-91673aefc667",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/kube-system/secrets?limit=500",
+  "verb": "list",
+  "user": {
+    "username": "minikube-user",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "impersonatedUser": {
+    "username": "system:serviceaccount:secure-ops:monitoring",
+    "groups": [
+      "system:serviceaccounts",
+      "system:serviceaccounts:secure-ops",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "192.168.49.1"
+  ],
+  "userAgent": "kubectl.exe/v1.34.1 (windows/amd64) kubernetes/93248f9",
+  "objectRef": {
+    "resource": "secrets",
+    "namespace": "kube-system",
+    "apiVersion": "v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "status": "Failure",
+    "message": "secrets is forbidden: User \"system:serviceaccount:secure-ops:monitoring\" cannot list resource \"secrets\" in API group \"\" in the namespace \"kube-system\"",
+    "reason": "Forbidden",
+    "details": {
+      "kind": "secrets"
+    },
+    "code": 403
+  },
+  "responseObject": {
+    "kind": "Status",
+    "apiVersion": "v1",
+    "metadata": {},
+    "status": "Failure",
+    "message": "secrets is forbidden: User \"system:serviceaccount:secure-ops:monitoring\" cannot list resource \"secrets\" in API group \"\" in the namespace \"kube-system\"",
+    "reason": "Forbidden",
+    "details": {
+      "kind": "secrets"
+    },
+    "code": 403
+  },
+  "requestReceivedTimestamp": "2025-12-10T21:51:40.447553Z",
+  "stageTimestamp": "2025-12-10T21:51:40.449655Z",
+  "annotations": {
+    "authorization.k8s.io/decision": "forbid",
+    "authorization.k8s.io/reason": ""
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "RequestResponse",
+  "auditID": "ea9743bd-37ad-40c6-924c-b41cbda392a3",
+  "stage": "ResponseComplete",
+  "requestURI": "/api/v1/namespaces/secure-ops/pods?fieldManager=kubectl-client-side-apply&fieldValidation=Strict",
+  "verb": "create",
+  "user": {
+    "username": "minikube-user",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "192.168.49.1"
+  ],
+  "userAgent": "kubectl.exe/v1.34.1 (windows/amd64) kubernetes/93248f9",
+  "objectRef": {
+    "resource": "pods",
+    "namespace": "secure-ops",
+    "name": "privileged-pod",
+    "apiVersion": "v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 201
+  },
+  "requestObject": {
+    "kind": "Pod",
+    "apiVersion": "v1",
+    "metadata": {
+      "name": "privileged-pod",
+      "namespace": "secure-ops",
+      "creationTimestamp": null,
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"name\":\"privileged-pod\",\"namespace\":\"secure-ops\"},\"spec\":{\"containers\":[{\"command\":[\"sleep\",\"3600\"],\"image\":\"alpine\",\"name\":\"pwn\",\"securityContext\":{\"privileged\":true}}],\"restartPolicy\":\"Never\"}}\n"
+      }
+    },
+    "spec": {
+      "containers": [
+        {
+          "name": "pwn",
+          "image": "alpine",
+          "command": [
+            "sleep",
+            "3600"
+          ],
+          "resources": {},
+          "terminationMessagePath": "/dev/termination-log",
+          "terminationMessagePolicy": "File",
+          "imagePullPolicy": "Always",
+          "securityContext": {
+            "privileged": true
+          }
+        }
+      ],
+      "restartPolicy": "Never",
+      "terminationGracePeriodSeconds": 30,
+      "dnsPolicy": "ClusterFirst",
+      "securityContext": {},
+      "schedulerName": "default-scheduler",
+      "enableServiceLinks": true
+    },
+    "status": {}
+  },
+  "responseObject": {
+    "kind": "Pod",
+    "apiVersion": "v1",
+    "metadata": {
+      "name": "privileged-pod",
+      "namespace": "secure-ops",
+      "uid": "bff11dda-e964-4271-87b1-ac26b17f1b7f",
+      "resourceVersion": "614",
+      "creationTimestamp": "2025-12-10T21:51:40Z",
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"name\":\"privileged-pod\",\"namespace\":\"secure-ops\"},\"spec\":{\"containers\":[{\"command\":[\"sleep\",\"3600\"],\"image\":\"alpine\",\"name\":\"pwn\",\"securityContext\":{\"privileged\":true}}],\"restartPolicy\":\"Never\"}}\n"
+      },
+      "managedFields": [
+        {
+          "manager": "kubectl-client-side-apply",
+          "operation": "Update",
+          "apiVersion": "v1",
+          "time": "2025-12-10T21:51:40Z",
+          "fieldsType": "FieldsV1",
+          "fieldsV1": {
+            "f:metadata": {
+              "f:annotations": {
+                ".": {},
+                "f:kubectl.kubernetes.io/last-applied-configuration": {}
+              }
+            },
+            "f:spec": {
+              "f:containers": {
+                "k:{\"name\":\"pwn\"}": {
+                  ".": {},
+                  "f:command": {},
+                  "f:image": {},
+                  "f:imagePullPolicy": {},
+                  "f:name": {},
+                  "f:resources": {},
+                  "f:securityContext": {
+                    ".": {},
+                    "f:privileged": {}
+                  },
+                  "f:terminationMessagePath": {},
+                  "f:terminationMessagePolicy": {}
+                }
+              },
+              "f:dnsPolicy": {},
+              "f:enableServiceLinks": {},
+              "f:restartPolicy": {},
+              "f:schedulerName": {},
+              "f:securityContext": {},
+              "f:terminationGracePeriodSeconds": {}
+            }
+          }
+        }
+      ]
+    },
+    "spec": {
+      "volumes": [
+        {
+          "name": "kube-api-access-2nppv",
+          "projected": {
+            "sources": [
+              {
+                "serviceAccountToken": {
+                  "expirationSeconds": 3607,
+                  "path": "token"
+                }
+              },
+              {
+                "configMap": {
+                  "name": "kube-root-ca.crt",
+                  "items": [
+                    {
+                      "key": "ca.crt",
+                      "path": "ca.crt"
+                    }
+                  ]
+                }
+              },
+              {
+                "downwardAPI": {
+                  "items": [
+                    {
+                      "path": "namespace",
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "defaultMode": 420
+          }
+        }
+      ],
+      "containers": [
+        {
+          "name": "pwn",
+          "image": "alpine",
+          "command": [
+            "sleep",
+            "3600"
+          ],
+          "resources": {},
+          "volumeMounts": [
+            {
+              "name": "kube-api-access-2nppv",
+              "readOnly": true,
+              "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+            }
+          ],
+          "terminationMessagePath": "/dev/termination-log",
+          "terminationMessagePolicy": "File",
+          "imagePullPolicy": "Always",
+          "securityContext": {
+            "privileged": true
+          }
+        }
+      ],
+      "restartPolicy": "Never",
+      "terminationGracePeriodSeconds": 30,
+      "dnsPolicy": "ClusterFirst",
+      "serviceAccountName": "default",
+      "serviceAccount": "default",
+      "securityContext": {},
+      "schedulerName": "default-scheduler",
+      "tolerations": [
+        {
+          "key": "node.kubernetes.io/not-ready",
+          "operator": "Exists",
+          "effect": "NoExecute",
+          "tolerationSeconds": 300
+        },
+        {
+          "key": "node.kubernetes.io/unreachable",
+          "operator": "Exists",
+          "effect": "NoExecute",
+          "tolerationSeconds": 300
+        }
+      ],
+      "priority": 0,
+      "enableServiceLinks": true,
+      "preemptionPolicy": "PreemptLowerPriority"
+    },
+    "status": {
+      "phase": "Pending",
+      "qosClass": "BestEffort"
+    }
+  },
+  "requestReceivedTimestamp": "2025-12-10T21:51:40.921577Z",
+  "stageTimestamp": "2025-12-10T21:51:40.924998Z",
+  "annotations": {
+    "authorization.k8s.io/decision": "allow",
+    "authorization.k8s.io/reason": "",
+    "pod-security.kubernetes.io/enforce-policy": "privileged:latest"
+  }
+}
+{"kind":"Event","apiVersion":"audit.k8s.io/v1","level":"RequestResponse","auditID":"0c3ddc2e-526c-4284-a577-47af94353bbb","stage":"ResponseComplete","requestURI":"/api/v1/namespaces/kube-system/pods/kube-apiserver-minikube","verb":"get","user":{"username":"minikube-user","groups":["system:masters","system:authenticated"]},"sourceIPs":["192.168.49.1"],"userAgent":"kubectl.exe/v1.34.1 (windows/amd64) kubernetes/93248f9","objectRef":{"resource":"pods","namespace":"kube-system","name":"kube-apiserver-minikube","apiVersion":"v1"},"responseStatus":{"metadata":{},"code":200},"responseObject":{"kind":"Pod","apiVersion":"v1","metadata":{"name":"kube-apiserver-minikube","namespace":"kube-system","uid":"121d2bf1-e6e1-4ee1-ae55-ee1e5f5d2450","resourceVersion":"371","creationTimestamp":"2025-12-10T21:47:08Z","labels":{"component":"kube-apiserver","tier":"control-plane"},"annotations":{"kubeadm.kubernetes.io/kube-apiserver.advertise-address.endpoint":"192.168.49.2:8443","kubernetes.io/config.hash":"abb7499385e21da2fdfa1cddc7cff8a6","kubernetes.io/config.mirror":"abb7499385e21da2fdfa1cddc7cff8a6","kubernetes.io/config.seen":"2025-12-10T21:46:51.683416885Z","kubernetes.io/config.source":"file","seccomp.security.alpha.kubernetes.io/pod":"runtime/default"},"ownerReferences":[{"apiVersion":"v1","kind":"Node","name":"minikube","uid":"e8e8cc98-dac5-40d4-be6a-367525f94870","controller":true}],"managedFields":[{"manager":"kubelet","operation":"Update","apiVersion":"v1","time":"2025-12-10T21:47:08Z","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:kubeadm.kubernetes.io/kube-apiserver.advertise-address.endpoint":{},"f:kubernetes.io/config.hash":{},"f:kubernetes.io/config.mirror":{},"f:kubernetes.io/config.seen":{},"f:kubernetes.io/config.source":{}},"f:labels":{".":{},"f:component":{},"f:tier":{}},"f:ownerReferences":{".":{},"k:{\"uid\":\"e8e8cc98-dac5-40d4-be6a-367525f94870\"}":{}}},"f:spec":{"f:containers":{"k:{\"name\":\"kube-apiserver\"}":{".":{},"f:command":{},"f:image":{},"f:imagePullPolicy":{},"f:livenessProbe":{".":{},"f:failureThreshold":{},"f:httpGet":{".":{},"f:host":{},"f:path":{},"f:port":{},"f:scheme":{}},"f:initialDelaySeconds":{},"f:periodSeconds":{},"f:successThreshold":{},"f:timeoutSeconds":{}},"f:name":{},"f:readinessProbe":{".":{},"f:failureThreshold":{},"f:httpGet":{".":{},"f:host":{},"f:path":{},"f:port":{},"f:scheme":{}},"f:periodSeconds":{},"f:successThreshold":{},"f:timeoutSeconds":{}},"f:resources":{".":{},"f:requests":{".":{},"f:cpu":{}}},"f:startupProbe":{".":{},"f:failureThreshold":{},"f:httpGet":{".":{},"f:host":{},"f:path":{},"f:port":{},"f:scheme":{}},"f:initialDelaySeconds":{},"f:periodSeconds":{},"f:successThreshold":{},"f:timeoutSeconds":{}},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{},"f:volumeMounts":{".":{},"k:{\"mountPath\":\"/etc/ca-certificates\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}},"k:{\"mountPath\":\"/etc/ssl/certs\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}},"k:{\"mountPath\":\"/usr/local/share/ca-certificates\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}},"k:{\"mountPath\":\"/usr/share/ca-certificates\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}},"k:{\"mountPath\":\"/var/lib/minikube/certs\"}":{".":{},"f:mountPath":{},"f:name":{},"f:readOnly":{}}}}},"f:dnsPolicy":{},"f:enableServiceLinks":{},"f:hostNetwork":{},"f:nodeName":{},"f:priorityClassName":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{".":{},"f:seccompProfile":{".":{},"f:type":{}}},"f:terminationGracePeriodSeconds":{},"f:tolerations":{},"f:volumes":{".":{},"k:{\"name\":\"ca-certs\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}},"k:{\"name\":\"etc-ca-certificates\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}},"k:{\"name\":\"k8s-certs\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}},"k:{\"name\":\"usr-local-share-ca-certificates\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}},"k:{\"name\":\"usr-share-ca-certificates\"}":{".":{},"f:hostPath":{".":{},"f:path":{},"f:type":{}},"f:name":{}}}}}},{"manager":"kubelet","operation":"Update","apiVersion":"v1","time":"2025-12-10T21:47:12Z","fieldsType":"FieldsV1","fieldsV1":{"f:status":{"f:conditions":{".":{},"k:{\"type\":\"ContainersReady\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}},"k:{\"type\":\"Initialized\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}},"k:{\"type\":\"PodScheduled\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}},"k:{\"type\":\"Ready\"}":{".":{},"f:lastProbeTime":{},"f:lastTransitionTime":{},"f:status":{},"f:type":{}}},"f:containerStatuses":{},"f:hostIP":{},"f:phase":{},"f:podIP":{},"f:podIPs":{".":{},"k:{\"ip\":\"192.168.49.2\"}":{".":{},"f:ip":{}}},"f:startTime":{}}},"subresource":"status"}]},"spec":{"volumes":[{"name":"ca-certs","hostPath":{"path":"/etc/ssl/certs","type":"DirectoryOrCreate"}},{"name":"etc-ca-certificates","hostPath":{"path":"/etc/ca-certificates","type":"DirectoryOrCreate"}},{"name":"k8s-certs","hostPath":{"path":"/var/lib/minikube/certs","type":"DirectoryOrCreate"}},{"name":"usr-local-share-ca-certificates","hostPath":{"path":"/usr/local/share/ca-certificates","type":"DirectoryOrCreate"}},{"name":"usr-share-ca-certificates","hostPath":{"path":"/usr/share/ca-certificates","type":"DirectoryOrCreate"}}],"containers":[{"name":"kube-apiserver","image":"k8s.gcr.io/kube-apiserver:v1.24.3","command":["kube-apiserver","--advertise-address=192.168.49.2","--allow-privileged=true","--audit-log-path=-","--audit-policy-file=/etc/ssl/certs/audit-policy.yaml","--authorization-mode=Node,RBAC","--client-ca-file=/var/lib/minikube/certs/ca.crt","--enable-admission-plugins=NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota","--enable-bootstrap-token-auth=true","--etcd-cafile=/var/lib/minikube/certs/etcd/ca.crt","--etcd-certfile=/var/lib/minikube/certs/apiserver-etcd-client.crt","--etcd-keyfile=/var/lib/minikube/certs/apiserver-etcd-client.key","--etcd-servers=https://127.0.0.1:2379","--kubelet-client-certificate=/var/lib/minikube/certs/apiserver-kubelet-client.crt","--kubelet-client-key=/var/lib/minikube/certs/apiserver-kubelet-client.key","--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname","--proxy-client-cert-file=/var/lib/minikube/certs/front-proxy-client.crt","--proxy-client-key-file=/var/lib/minikube/certs/front-proxy-client.key","--requestheader-allowed-names=front-proxy-client","--requestheader-client-ca-file=/var/lib/minikube/certs/front-proxy-ca.crt","--requestheader-extra-headers-prefix=X-Remote-Extra-","--requestheader-group-headers=X-Remote-Group","--requestheader-username-headers=X-Remote-User","--secure-port=8443","--service-account-issuer=https://kubernetes.default.svc.cluster.local","--service-account-key-file=/var/lib/minikube/certs/sa.pub","--service-account-signing-key-file=/var/lib/minikube/certs/sa.key","--service-cluster-ip-range=10.96.0.0/12","--tls-cert-file=/var/lib/minikube/certs/apiserver.crt","--tls-private-key-file=/var/lib/minikube/certs/apiserver.key"],"resources":{"requests":{"cpu":"250m"}},"volumeMounts":[{"name":"ca-certs","readOnly":true,"mountPath":"/etc/ssl/certs"},{"name":"etc-ca-certificates","readOnly":true,"mountPath":"/etc/ca-certificates"},{"name":"k8s-certs","readOnly":true,"mountPath":"/var/lib/minikube/certs"},{"name":"usr-local-share-ca-certificates","readOnly":true,"mountPath":"/usr/local/share/ca-certificates"},{"name":"usr-share-ca-certificates","readOnly":true,"mountPath":"/usr/share/ca-certificates"}],"livenessProbe":{"httpGet":{"path":"/livez","port":8443,"host":"192.168.49.2","scheme":"HTTPS"},"initialDelaySeconds":10,"timeoutSeconds":15,"periodSeconds":10,"successThreshold":1,"failureThreshold":8},"readinessProbe":{"httpGet":{"path":"/readyz","port":8443,"host":"192.168.49.2","scheme":"HTTPS"},"timeoutSeconds":15,"periodSeconds":1,"successThreshold":1,"failureThreshold":3},"startupProbe":{"httpGet":{"path":"/livez","port":8443,"host":"192.168.49.2","scheme":"HTTPS"},"initialDelaySeconds":10,"timeoutSeconds":15,"periodSeconds":10,"successThreshold":1,"failureThreshold":24},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File","imagePullPolicy":"IfNotPresent"}],"restartPolicy":"Always","terminationGracePeriodSeconds":30,"dnsPolicy":"ClusterFirst","nodeName":"minikube","hostNetwork":true,"securityContext":{"seccompProfile":{"type":"RuntimeDefault"}},"schedulerName":"default-scheduler","tolerations":[{"operator":"Exists","effect":"NoExecute"}],"priorityClassName":"system-node-critical","priority":2000001000,"enableServiceLinks":true,"preemptionPolicy":"PreemptLowerPriority"},"status":{"phase":"Running","conditions":[{"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2025-12-10T21:46:52Z"},{"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2025-12-10T21:47:08Z"},{"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2025-12-10T21:47:08Z"},{"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2025-12-10T21:46:52Z"}],"hostIP":"192.168.49.2","podIP":"192.168.49.2","podIPs":[{"ip":"192.168.49.2"}],"startTime":"2025-12-10T21:46:52Z","containerStatuses":[{"name":"kube-apiserver","state":{"running":{"startedAt":"2025-12-10T21:46:53Z"}},"lastState":{"terminated":{"exitCode":1,"reason":"Error","startedAt":"2025-12-10T21:46:41Z","finishedAt":"2025-12-10T21:46:49Z","containerID":"docker://0d79a63e6d579de9da9d90f451b69597add480077461a47bcabcc7c2932f95a1"}},"ready":true,"restartCount":2,"image":"k8s.gcr.io/kube-apiserver:v1.24.3","imageID":"docker-pullable://k8s.gcr.io/kube-apiserver@sha256:a04609b85962da7e6531d32b75f652b4fb9f5fe0b0ee0aa160856faad8ec5d96","containerID":"docker://7ad792204fd124c1c4ca0be805a45f16021e690d54d8850248d5009c221945a8","started":true}],"qosClass":"Burstable"}},"requestReceivedTimestamp":"2025-12-10T21:51:53.704565Z","stageTimestamp":"2025-12-10T21:51:53.707048Z","annotations":{"authorization.k8s.io/decision":"allow","authorization.k8s.io/reason":""}}
